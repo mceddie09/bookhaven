@@ -1,12 +1,13 @@
-import React from "react";
-import { FaFacebook, FaInstagramSquare, FaLinkedin, FaYoutube, FaTiktok } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaFacebook, FaInstagramSquare, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter, FaSquareThreads } from "react-icons/fa6";
 import { AiFillTikTok } from "react-icons/ai";
 import "../CSS/Footer.css";
 import logo from "../Assets/logo.png";
 
 const Footer = () => {
-  // Footer navigation links (titles as actual links)
+  const [email, setEmail] = useState("");
+
   const footerNavigation = [
     {
       title: "Home",
@@ -30,7 +31,6 @@ const Footer = () => {
     },
   ];
 
-  // Social media icons
   const socialIcons = [
     { icon: <FaFacebook />, label: "Facebook", link: "#" },
     { icon: <AiFillTikTok />, label: "TikTok", link: "#" },
@@ -41,13 +41,19 @@ const Footer = () => {
     { icon: <FaYoutube />, label: "YouTube", link: "#" },
   ];
 
+  const handleSubscribe = () => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+    alert("Subscribed successfully!");
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Branding Section */}
         <div className="footer-branding">
-          <img src={logo} alt="Book Haven Logo" className="logo" />
-          <p className="footer-tagline">Your Gateway to Great Reads!</p>
           <p className="footer-copyright">© 2024 Book Haven</p>
           <div className="social-icons">
             {socialIcons.map((social, index) => (
@@ -56,9 +62,21 @@ const Footer = () => {
               </a>
             ))}
           </div>
+          <div className="footer-newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <div className="newsletter-form">
+              <input 
+                type="email" 
+                placeholder="Enter your email" 
+                className="newsletter-input" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <button className="newsletter-button" onClick={handleSubscribe}>Subscribe</button>
+            </div>
+          </div>
         </div>
 
-        {/* Navigation Columns */}
         <div className="footer-nav">
           {footerNavigation.map((column, index) => (
             <div key={index} className="footer-column">

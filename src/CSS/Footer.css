@@ -16,7 +16,7 @@
 .footer-branding {
   flex: 1;
   min-width: 250px;
-  text-align: left;
+  text-align: center;
 }
 
 .logo {
@@ -106,4 +106,46 @@
   .footer-column {
     margin-bottom: 20px;
   }
+}
+
+.footer-newsletter {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-newsletter h3 {
+  font-size: 20px;
+  color: #fff;
+}
+
+.footer-newsletter p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.newsletter-input {
+  width: 250px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+.newsletter-button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.newsletter-button:hover {
+  background-color: #ff4500;
 }
