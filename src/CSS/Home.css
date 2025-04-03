@@ -1,0 +1,484 @@
+/* General Styling */
+.home {
+  color: #131C26;
+  background-color: #F4EFE9; /* Cohesive light background */
+  padding: 20px;
+  text-align: center;
+  font-family: 'Calibri', sans-serif;
+}
+
+/* Hero Section Styles */
+.hero {
+  display: flex;
+  justify-content: space-between;  /* Positions text and image at opposite ends */
+  align-items: center;  /* Vertically centers the content */
+  background-color: #FFF7EE; /* Parchment White background for the section */
+  padding: 50px 20px;
+}
+
+.hero-text {
+  flex: 1;  /* Takes up half of the space */
+  max-width: 50%;  /* Limit the width of the text */
+  color: #131C26; /* Bookish Black for text color */
+}
+
+.hero h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #2E4057; /* Inkwell Blue for headers */
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #2E4057; /* Inkwell Blue for text */
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background-color: #EE583F; /* Intensity Indigo for the button */
+  color: #FFF7EE; /* Parchment White text on button */
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #C7B65E; /* Aged Gold for button hover */
+}
+
+/* Hero Image Styles */
+.hero-image {
+  flex: 1;  /* Takes up half of the space */
+  max-width: 50%;  /* Limit the width of the image */
+  background-image: url('../Assets/Client3_Book2.png'); /* Example image path */
+  background-size: cover;
+  background-position: center;
+  height: 300px; /* Adjust the height as necessary */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;  /* Stack text and image vertically on small screens */
+    text-align: center;  /* Center-align the text */
+  }
+
+  .hero-text {
+    max-width: 100%;  /* Take full width on mobile */
+    margin-bottom: 20px;
+  }
+
+  .hero-image {
+    max-width: 100%;  /* Take full width on mobile */
+    height: 200px;  /* Adjust the height for mobile */
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+
+/* Featured Collection */
+.featured {
+  padding: 40px 60px;
+  background-color: #FFF7EE;  
+}
+
+.featured h2 {
+  text-align: center;
+  font-size: 35px;
+  color: #2E4057; /* Inkwell Blue */
+}
+
+.featured p {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.featured-items {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.item {
+  background-color: #FFF7EE; /* Parchment White */
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%; /* For desktop view, 3 items in one row */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: scale(1.05); /* Hover effect to slightly scale the item */
+}
+
+.item-image {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.item-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.item h3 {
+  font-size: 20px;
+  color: #131C26; /* Bookish Black */
+  margin-bottom: 10px;
+}
+
+.item button {
+  background-color: #EE583F; /* Intensity Indigo */
+  color: #FFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.item button:hover {
+  background-color: #C7B65E; /* Aged Gold */
+}
+
+/* Mobile Responsiveness: Stack items in a column */
+@media (max-width: 768px) {
+  .featured-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item {
+    width: 80%; /* Each item will take up most of the width on mobile */
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Book Categories */
+.categories {
+  background-color: #FFF7EE;  
+  padding: 50px 30px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding shadow for the individual category items */
+}
+
+.categories h2 {
+  font-size: 30px;
+  color: #2E4057; /* Inkwell Blue */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.category-items {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensure items wrap in smaller screens */
+}
+
+.category {
+  background-color: #FFF7EE; /* Parchment White */
+  color: #131C26; /* Bookish Black */
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category:hover {
+  transform: scale(1.05);
+  background-color: #EE583F; /* Intensity Indigo */
+  color: #FFF7EE; /* Parchment White */
+}
+
+.category:active {
+  background-color: #C7B65E; /* Aged Gold */
+  color: #FFF7EE;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .category-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category {
+    width: 80%;
+    margin-bottom: 15px;
+  }
+}
+
+
+/* Testimonials */
+/* Testimonials Section Styling */
+.testimonials {
+  background-color: #FFF7EE; /* Parchment White background */
+  padding: 50px 30px;
+  text-align: center;
+  margin: 50px 0; /* Add margin to separate from other sections */
+  border-top: 3px solid #2E4057; /* Inkwell Blue border to distinguish the section */
+  border-bottom: 3px solid #2E4057; /* Inkwell Blue border for symmetry */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a lifted effect */
+}
+
+.testimonials h2 {
+  font-size: 30px;
+  color: #2E4057; /* Inkwell Blue */
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+.testimonial-items {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background-color: #FFF7EE; /* Parchment White background */
+  color: #131C26; /* Bookish Black text */
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+  font-size: 18px;
+  font-family: Comfortaa, sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for testimonial boxes */
+  border: 1px solid #2E4057; /* Inkwell Blue border around each testimonial */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.testimonial p {
+  font-style: italic;
+}
+
+.testimonial .client {
+  background-color: #2E4057; /* Inkwell Blue */
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin: 20px auto;
+  background-image: url('../Assets/logo1.png'); /* Add image path or use a placeholder */
+  background-size: cover;
+  background-position: center;
+}
+
+.testimonial:hover {
+  transform: scale(1.05);
+  background-color: #EE583F; /* Intensity Indigo for hover */
+  color: #FFF7EE; /* Parchment White text on hover */
+}
+
+.testimonial:active {
+  background-color: #C7B65E; /* Aged Gold for active state */
+  color: #FFF7EE;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .testimonial-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Call to Action */
+/* CTA Section Styles */
+.cta {
+  background-color: #FFF7EE; /* Parchment White */
+  padding: 50px 30px;
+  margin-top: 30px;
+}
+
+.cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cta-text {
+  max-width: 800px;
+  text-align: left; /* Left align the text */
+  margin-bottom: 30px;
+}
+
+.cta h2 {
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #2E4057; /* Inkwell Blue */
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-family: Comfortaa, sans-serif;
+  font-size: 20px;
+  color: #131C26; /* Bookish Black */
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.cta-button {
+  font-family: Calibri, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  color: #FFF;
+  background-color: #EE583F; /* Intensity Indigo */
+}
+
+.cta-button.explore {
+  background-color: #EE583F; /* Intensity Indigo */
+}
+
+.cta-button.contact {
+  background-color: #C7B65E; /* Aged Gold */
+}
+
+.cta-button:hover {
+  opacity: 0.8;
+}
+
+.cta-button:active {
+  transform: scale(0.98);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .cta-content {
+    text-align: center;
+    padding: 30px 15px;
+  }
+
+  .cta-text {
+    text-align: center; /* Center the text on mobile */
+    margin-bottom: 20px;
+  }
+
+  .cta h2 {
+    font-size: 25px;
+  }
+
+  .cta p {
+    font-size: 18px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* About Section */
+/* About Us Section Styles */
+.about {
+  background-color: #FFF7EE; /* Parchment White */
+  padding: 60px 40px;
+  text-align: center;
+  border-top: 4px solid #C7B65E; /* Aged Gold */
+}
+
+.about h2 {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 32px;
+  color: #2E4057; /* Inkwell Blue */
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.hours {
+  background-color: #C7B65E; /* Aged Gold */
+  padding: 20px;
+  border-radius: 10px;
+  color: #FFF;
+  flex: 1;
+  min-width: 280px;
+}
+
+.hours h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.hours p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.about-description {
+  font-size: 20px;
+  color: #131C26; /* Bookish Black */
+  flex: 2;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hours {
+    width: 100%;
+  }
+
+  .about-description {
+    font-size: 18px;
+  }
+}
+

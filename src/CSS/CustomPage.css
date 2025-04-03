@@ -1,0 +1,71 @@
+/* CustomPage.css */
+.custom {
+  padding: 40px;
+  background-color: #FFF7EE;
+  font-family: "Roboto", sans-serif;
+}
+
+.custom h2 {
+  font-size: 36px;
+  color: #2E4057;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.events-section {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.event-card {
+  background-color: #C7B65E;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  width: 270px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.event-icon {
+  background-color: #2E4057;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+}
+
+.event-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.event-details {
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
+
+.testimonials {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.testimonials h3 {
+  font-size: 30px;
+  color: #34495e;
+}
+
+.testimonials p {
+  font-size: 18px;
+  color: #7f8c8d;
+}

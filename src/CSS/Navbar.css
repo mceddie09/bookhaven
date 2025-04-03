@@ -1,0 +1,101 @@
+/* Navbar.css */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2E4057; /* Inkwell Blue */
+  padding: 20px 30px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 60px;
+  margin-right: 10px;
+}
+
+.navbar-title {
+  font-size: 24px;
+  color: #FFF7EE; /* Parchment White */
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-right: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #FFF7EE; /* Parchment White */
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #C7B65E; /* Aged Gold */
+}
+
+/* Hamburger Icon Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 4px;
+  background-color: #FFF7EE; /* Parchment White */
+  border-radius: 5px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;  /* Hide links by default on mobile */
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background-color: #2E4057; /* Inkwell Blue */
+    width: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    flex-direction: column;
+  }
+
+  .nav-links.active {
+    display: flex;  /* Show links when hamburger is clicked */
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger icon on mobile */
+  }
+}
